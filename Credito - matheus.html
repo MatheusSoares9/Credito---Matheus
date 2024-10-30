@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Credito - matheus.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000000; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { color: #3366FF; }
+.cpp1-comment { color: #3366FF; font-style: italic; }
+.cpp1-float { color: #FF00FF; }
+.cpp1-hexadecimal { color: #FF00FF; }
+.cpp1-identifier { color: #00FF00; }
+.cpp1-illegalchar { background-color: #800000; color: #FF0000; }
+.cpp1-number { color: #0000FF; }
+.cpp1-octal { color: #FF00FF; }
+.cpp1-preprocessor { color: #33CCCC; }
+.cpp1-reservedword { color: #008000; }
+.cpp1-space { background-color: #000000; color: #FFFFFF; }
+.cpp1-string { color: #C3C3C3; }
+.cpp1-symbol { color: #FF0000; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="cpp1-preprocessor">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;locale.h&gt;
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> </span><span class="cpp1-identifier">main</span><span class="cpp1-symbol">()</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">	
+	</span><span class="cpp1-identifier">setlocale</span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">LC_ALL</span><span class="cpp1-symbol">,</span><span class="cpp1-string">&quot;Portuguese&quot;</span><span class="cpp1-symbol">);
+
+</span><span class="cpp1-space">	
+    </span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> </span><span class="cpp1-identifier">valor_compra</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.0</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">char</span><span class="cpp1-space"> </span><span class="cpp1-identifier">ultima_compra</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> </span><span class="cpp1-identifier">dia_pagamento</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    
+    </span><span class="cpp1-reservedword">do</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Informe o valor da compra: R$ &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-identifier">scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%f&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">valor_compra</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        
+    
+        </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+=</span><span class="cpp1-space"> </span><span class="cpp1-identifier">valor_compra</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">        
+        
+        </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Essa &eacute; a &uacute;ltima compra? (s/n):  &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        </span><span class="cpp1-identifier">scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot; %c&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">ultima_compra</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">        
+    </span><span class="cpp1-symbol">}</span><span class="cpp1-space"> </span><span class="cpp1-reservedword">while</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">ultima_compra</span><span class="cpp1-space"> </span><span class="cpp1-symbol">!=</span><span class="cpp1-space"> </span><span class="cpp1-character">'s'</span><span class="cpp1-symbol">);
+
+
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Informe o dia do pagamento da fatura: &quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">scanf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;%d&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&amp;</span><span class="cpp1-identifier">dia_pagamento</span><span class="cpp1-symbol">);
+
+</span><span class="cpp1-space">    
+    </span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> </span><span class="cpp1-identifier">juros</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-float">0.0</span><span class="cpp1-symbol">;
+
+</span><span class="cpp1-space">    
+    </span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> </span><span class="cpp1-symbol">(</span><span class="cpp1-identifier">dia_pagamento</span><span class="cpp1-space"> </span><span class="cpp1-symbol">&gt;</span><span class="cpp1-space"> </span><span class="cpp1-number">25</span><span class="cpp1-symbol">)</span><span class="cpp1-space"> </span><span class="cpp1-symbol">{
+</span><span class="cpp1-space">        </span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> </span><span class="cpp1-identifier">dias_atraso</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-identifier">dia_pagamento</span><span class="cpp1-space"> </span><span class="cpp1-symbol">-</span><span class="cpp1-space"> </span><span class="cpp1-number">25</span><span class="cpp1-symbol">;</span><span class="cpp1-identifier">F
+</span><span class="cpp1-space">        
+        </span><span class="cpp1-identifier">juros</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.03</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-float">0.01</span><span class="cpp1-space"> </span><span class="cpp1-symbol">*</span><span class="cpp1-space"> </span><span class="cpp1-identifier">dias_atraso</span><span class="cpp1-symbol">;
+</span><span class="cpp1-space">    </span><span class="cpp1-symbol">}
+
+</span><span class="cpp1-space">    
+    	</span><span class="cpp1-reservedword">float</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_a_pagar</span><span class="cpp1-space"> </span><span class="cpp1-symbol">=</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-space"> </span><span class="cpp1-symbol">+</span><span class="cpp1-space"> </span><span class="cpp1-identifier">juros</span><span class="cpp1-symbol">;
+
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;\nResumo da fatura:\n&quot;</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Total das compras: R$ %.2f\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_compras</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Juros: R$ %.2f\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-identifier">juros</span><span class="cpp1-symbol">);
+</span><span class="cpp1-space">    </span><span class="cpp1-identifier">printf</span><span class="cpp1-symbol">(</span><span class="cpp1-string">&quot;Total a pagar: R$ %.2f\n&quot;</span><span class="cpp1-symbol">,</span><span class="cpp1-space"> </span><span class="cpp1-identifier">total_a_pagar</span><span class="cpp1-symbol">);
+
+</span><span class="cpp1-space">    </span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> </span><span class="cpp1-number">0</span><span class="cpp1-symbol">;
+}
+
+</span></span>
+</code></pre>
+</body>
+</html>
